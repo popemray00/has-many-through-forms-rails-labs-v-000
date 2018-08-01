@@ -11,7 +11,7 @@
   <%= f.text_area :content %>
   </p>
 
-  <% Category.each do |c| %>
+  <% Category.all.each do |c| %>
     <p>
       <label for="category_id_ <%= c.id %>"><%= c.name %></label>
       <input type="checkbox" name="post[category_ids]" value="<%= c.id %>">
